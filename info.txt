@@ -1,3 +1,4 @@
 Videos to repeat time-to-time in Trendytech course:
 Week03: Spark Execution Plan
 week09: internals of spark & continuation (2 videos)
+week09: Evaluating initial partitions in dataframe.
