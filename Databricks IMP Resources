@@ -1,0 +1,2 @@
+How Delta Lake uses metadata to make certain aggregations much faster:
+https://delta.io/blog/2023-04-19-faster-aggregations-metadata/
