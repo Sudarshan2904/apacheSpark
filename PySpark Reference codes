@@ -1,0 +1,14 @@
+1. To get the month/year out of timestamp/date:
+  date_format(column_name, 'MMMM') as month   date_format(column_name, 'yyyy') as year
+
+2. How to implement aggregate function in column expression style of dataframes -
+new_df = df.groupBy('country','invoiceno') \
+.agg( expr("sum(quantity) as total_quantity"), expr("sum(quantity*unitprice) as total_invoice") ).sort('total_invoice', ascending= False)
+
+3. To use window function in spark dataframes - 
+from pyspark.sql.functions import Window
+
+my_window = Window.partitionBy('country') \
+            .orderBy(desc('invoicevalue'))
+
+dense_rank_check = df1.withColumn('dense_rank', dense_rank().over(my_window))
